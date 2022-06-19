@@ -162,8 +162,8 @@ INSERT INTO Escuela (FacultadID, NombreEAP) VALUES (20, 'Geografía');
 
 /* REGISTRO DE TUTORES */
 
-ALTER TABLE Tutor MODIFY Dni int UNIQUE;
-ALTER TABLE Tutorado MODIFY celular int;
+# ALTER TABLE Tutor MODIFY Dni int UNIQUE;
+# ALTER TABLE Tutorado MODIFY celular int;
 
 # PROCEDIMIENTOS ALMACENADOS
 DELIMITER //
@@ -189,12 +189,8 @@ END//
 DELIMITER ;
 
 
-DROP PROCEDURE SesionesDisponiblesTutor;
 
-select * from sesion;
+# DROP PROCEDURE SesionesDisponiblesTutor;
 
-CALL SesionesDisponiblesTutor (18200188);
-select * from tutor;
+# CALL SesionesDisponiblesTutor (18200188);
 
-select * from asistenciatutor;
-select * from asistenciatutorado;
